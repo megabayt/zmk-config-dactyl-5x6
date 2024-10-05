@@ -18,34 +18,13 @@
 #
 ---
 manifest:
-  defaults:
-    remote: timur97perm
-
   remotes:
-    - name: upstream
+    - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: timur97perm
-      url-base: https://github.com/timur97perm
-
   projects:
-    - name: dactyl_5x6
-      revision: main
-      path: modules/helpers
-    - name: zmk-auto-layer
-      revision: main
-      path: modules/auto-layer
-    - name: zmk-tri-state
-      revision: main
-      path: modules/tri-state
-
-    # ZMK with Zephyr namespaced under /zmk. This requires that ZMK imports
-    # Zephyr with a path other than `zephyr` (as in `going-modular`).
     - name: zmk
-      revision: going-modular
-      path: .
-      import:
-        file: app/west.yml
-        path-prefix: zmk
-
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
   self:
     path: config
