@@ -4,24 +4,12 @@ config ZMK_KEYBOARD_NAME
     default "dactyl_5x6"
 
 config ZMK_SPLIT_ROLE_CENTRAL
-    default n
-
-config ZMK_SPLIT
-    default y
-    
-endif
-
-if SHIELD_dactyl_5x6_right
-
-config ZMK_KEYBOARD_NAME
-    default "dactyl_5x6"
-
-config ZMK_SPLIT_ROLE_CENTRAL
-    default y
-
-config ZMK_SPLIT
     default y
 
 endif
 
+if SHIELD_Kdactyl_5x6_left || SHIELD_dactyl_5x6_right
+
+    config ZMK_SPLIT
+        default y
 
