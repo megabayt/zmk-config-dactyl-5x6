@@ -1,12 +1,20 @@
 if SHIELD_dactyl_5x6_left
 
 config ZMK_KEYBOARD_NAME
-    default "dactyl_5x6"
+    default "dactyl_5x6_left"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
     
 endif
+
+if SHIELD_dactyl_5x6_left
+
+config ZMK_KEYBOARD_NAME
+    default "dactyl_5x6_right"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
 
 if SHIELD_dactyl_5x6_left || SHIELD_dactyl_5x6_right
 
